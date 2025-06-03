@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@ body {
     height: 100vh;
     font-family: 'Space Grotesk', serif;
     font-optical-sizing: auto;
-    positon: relative;
+    position: relative;
     background-image: url(img/Fujibg.png);
     background-size: cover;
     background-position: center;
@@ -23,18 +23,18 @@ section {
 }
 
 section main {
-    padding: 100px 10px;
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100px;
+    gap: 15px;
+    width: 100%;
     max-width: 600px;
     justify-content: center;
     align-items: center;
 }
 
 section main img {
-    width: 100px;
+    width: 120px;
     border-radius: 50%;
     aspect-ratio: 1;
     box-shadow: 0 0 5px 1px teal;
@@ -44,21 +44,25 @@ section main h2 {
     font-weight: 600;
     color: white;
     white-space: nowrap;
+    font-size: 1.8rem;
+    text-align: center;
     text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 section main a {
     display: flex;
-    width: 600%;
+    max-width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: center;
     border: 2px solid white;
-    padding: 10px;
+    padding: 12px 16px;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    gap: 20px;
+    gap: 12px;
     transition: 0.3s;
+    font-size: 1rem;
 }
 
 section main a:hover {
@@ -74,6 +78,7 @@ section footer p {
     color: white;
     font-size: 0.75em;
     padding: 20px;
+    text-align: center;
     text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
@@ -81,4 +86,27 @@ section footer p a {
     color: white;
     font-weight: 600;
     text-decoration: none;
+}
+
+/* ✅ Tambahkan media query untuk layar kecil (ponsel) */
+@media (max-width: 600px) {
+    section main {
+        padding: 60px 15px;
+        gap: 12px;
+    }
+
+    section main h2 {
+        font-size: 1.3rem;
+        white-space: normal;
+    }
+
+    section main a {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    section main img {
+        width: 100px;
+    }
 }
